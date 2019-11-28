@@ -32,7 +32,7 @@ deploy:
     tags: false
 addons:
   s3_region: 'us-est-1'
-  artifacts: true
+  artifacts: 
     working_dir: out
     paths:
     - ./download.txt
