@@ -28,7 +28,7 @@ deploy:
   file: test
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
 # addons:
   # s3_region: 'us-est-1'
   # artifacts:
