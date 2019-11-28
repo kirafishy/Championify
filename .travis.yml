@@ -14,13 +14,21 @@ before_script:
   - node -v
   - npm -v
 script: npm run test-coverage
-os: osx
+os: linux
 cache:
   directories:
     - node_modules
 after_success:
   - npm run coveralls
-  # - npm run build-artifact
+  - npm run build-artifact
+deploy:
+  provider: releases
+  api_key:
+    secure: 7a85f7a68a1d19be3587446b649888ed99824af7
+  file: test
+  skip_cleanup: true
+  on:
+    tags: true
 # addons:
   # s3_region: 'us-est-1'
   # artifacts:
