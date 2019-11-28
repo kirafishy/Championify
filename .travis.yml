@@ -24,7 +24,7 @@ after_success:
 deploy:
   provider: releases
   api_key:
-    secure: 7a85f7a68a1d19be3587446b649888ed99824af7
+    secure: a6b108e7ab71fd575ea5ab7a208dc729343e58b2
   file: test
   skip_cleanup: true
   on:
