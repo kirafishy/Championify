@@ -23,7 +23,7 @@ after_success:
   - npm run build-artifact
 deploy:
   provider: releases
-  file: test
+  file: releases/*
   skip_cleanup: true
   api_key:
     secure: ${api_key}
