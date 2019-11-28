@@ -1,7 +1,6 @@
 language: objective-c # Give me OSX images!
 before_install:
   - sw_vers -productVersion
-  - echo $api_key
   # - brew update
   # - brew install p7zip
 install:
@@ -26,6 +25,8 @@ deploy:
   provider: releases
   file: test
   skip_cleanup: true
+  api_key:
+    secure: ${api_key}
   on:
     tags: false
 # addons:
