@@ -30,8 +30,8 @@ test_script:
   # - npm run build-artifact
 on_success:
   - npm run coveralls
-# artifacts:
-  # - path: download.txt
-    # name: Download Build (link within text file)
-# cache:
-#   - node_modules -> package.json
+artifacts:
+  - path: download.txt
+    name: Download Build (link within text file)
+cache:
+  - node_modules -> package.json
